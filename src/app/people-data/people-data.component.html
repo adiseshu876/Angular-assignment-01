@@ -1,0 +1,21 @@
+<div class="person-container">
+  <div class="heder-path">
+    <h1>PEOPLE DATA</h1>
+    <!-- <td [ngClass]="val > 10 ? 'red' : 'green'">{{ val }}</td> -->
+
+    <button type="submit" (click)="onNextClick()"[disabled]="!displayData.length" [ngClass]="displayData.length?'button-event':'button-disabled'">
+      NEXT PERSON
+    </button>
+    <button type="submit" (click)="onPrevious()" class="previous-button">PREVIOUS PERSON</button>
+  </div>
+
+  <div class="person-detailsList">
+    <div *ngFor="let person of displayData; let i = index" class="person-data" >
+      <div class="person-index">{{ indexIncrement * numberOfItemsDisplay +i }}</div>
+      <div class="person-name">Name: {{ person.name }}</div>
+      <div class="person-location">Location: {{ person.location }}</div>
+    </div>
+    <div *ngIf="displayData.length === 0" class="error-message">No more people!</div>
+  </div>
+</div>
+

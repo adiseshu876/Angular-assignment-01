@@ -1,0 +1,129 @@
+.heder-path {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.button-event {
+  background-color: darkorange;
+  border-radius: 20px;
+  border: 1px;
+
+  height: 36px;
+  color: white;
+  /* cursor: pointer; */
+  cursor: pointer;
+  padding: 0px 12px;
+}
+.button-disabled {
+  background-color: grey;
+  border-radius: 20px;
+  border: 1px;
+
+  height: 36px;
+  /* color: white; */
+  color: white;
+  cursor: not-allowed;
+  padding: 0px 12px;
+}
+.previous-button {
+  background-color: rgb(241, 94, 94);
+  border-radius: 20px;
+  border: 1px;
+
+  height: 36px;
+  color: white;
+  padding: 0px 12px;
+}
+.person-detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.person-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: skyblue;
+}
+
+.person-data {
+  /* display: grid; */
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  border-radius: 12px;
+  box-shadow: 0px 2px 5px;
+  height: 100px;
+  grid-template-columns: fit-content(300px);
+}
+.error-message {
+  color: brown;
+  font-size: 20px;
+}
+
+.person-index {
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  grid-column-start: 1;
+
+  width: 40px;
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  background-color: #a1d4a1;
+  color: aliceblue;
+  font-size: 31px;
+}
+
+.person-name {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  font-size: 26px;
+  background-color: lightblue;
+
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.person-location {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: aliceblue;
+  font-size: 25px;
+
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .person-name {
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+  }
+
+  .person-location {
+    grid-row-start: 2;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .format-cont {
+    grid-template-columns: 300px;
+  }
+
+  .person-name {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .person-location {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+}
